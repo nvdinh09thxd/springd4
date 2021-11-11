@@ -28,9 +28,9 @@ public class UploadFileController {
 
 	@PostMapping("upload")
 	public String upload(@RequestParam("picture") List<MultipartFile> list, Model model) {
-		List<String> listFileName = new ArrayList<String>();
+		List<String> listFileName = new ArrayList<>();
 		if (list.size() > 0) {
-			String dirUpload = servletContext.getRealPath("WEB-INF/resources/upload");
+			String dirUpload = servletContext.getRealPath("WEB-INF/resources/uploads");
 			File fileUpload = new File(dirUpload);
 			if (!fileUpload.exists()) {
 				fileUpload.mkdirs();

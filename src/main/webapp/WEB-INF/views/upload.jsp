@@ -9,15 +9,14 @@
 </head>
 <body>
 	<h2>Upload File Spring MVC</h2>
-	<c:url value="/upload" var="upload"></c:url>
 	<form action="${upload}" method="post" enctype="multipart/form-data">
-		<input type="file" name="picture" multiple="multiple" />
+		<input type="file" name="picture" multiple />
 		<input type="submit" value="Upload" />
 	</form>
 	<br />
 	<c:if test="${not empty listFileName}">
 		<c:forEach items="${listFileName}" var="fileName">
-			<c:url value="/resources/upload/${fileName}" var="image"></c:url>
+			<c:url value="/resources/uploads/${fileName}" var="image"></c:url>
 			<img width="300px" alt="" src="${image}">
 		</c:forEach>
 	</c:if>
