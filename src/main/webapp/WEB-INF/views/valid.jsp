@@ -13,20 +13,20 @@
 	<c:if test="${not empty success}">
 		<p style="color: blue">${success}</p>
 	</c:if>
-	<c:url value="/valid" var="valid"></c:url>
-	<form action="${valid}" method="post" enctype="multipart/form-data">
+	
+	<form method="post" enctype="multipart/form-data">
 		<p>
-			<form:errors path="error.name" cssStyle="color:red;font-style:italic" ></form:errors><br />
+			<form:errors path="error.name" cssStyle="color:red; font-style:italic" ></form:errors><br />
 			<label>Họ tên</label>
 			<input type="text" name="name" value="${user.name}" />
 		</p>
 		<p>
-			<form:errors path="error.age" cssStyle="color:red;font-style:italic" ></form:errors><br />
+			<form:errors path="error.age" cssStyle="color:red; font-style:italic" ></form:errors><br />
 			<label>Tuổi</label>
 			<input type="text" name="age" value="${user.age}" />
 		</p>
 		<p>
-			<form:errors path="error.avatar" cssStyle="color:red;font-style:italic" ></form:errors><br />
+			<form:errors path="error.avatar" cssStyle="color:red; font-style:italic" ></form:errors><br />
 			<label>Ảnh đại diện</label>
 			<input type="file" name="picture" />
 		</p>

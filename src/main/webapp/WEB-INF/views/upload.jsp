@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h2>Upload File Spring MVC</h2>
-	<form action="${upload}" method="post" enctype="multipart/form-data">
+	<form method="post" enctype="multipart/form-data">
 		<input type="file" name="picture" multiple />
 		<input type="submit" value="Upload" />
 	</form>

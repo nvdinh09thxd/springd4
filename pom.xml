@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>vn.edu.vinaenter</groupId>
-	<artifactId>vinaenterspringd3</artifactId>
+	<artifactId>springd4</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>vinaenterspringd3 Maven Webapp</name>
+	<name>springd4 Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
 	<dependencies>
@@ -105,6 +105,6 @@
 				<version>3.3.1</version>
 			</plugin>
 		</plugins>
-		<finalName>vinaenterspringd3</finalName>
+		<finalName>springd4</finalName>
 	</build>
 </project>

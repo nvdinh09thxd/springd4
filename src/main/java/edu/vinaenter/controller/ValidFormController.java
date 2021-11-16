@@ -1,8 +1,11 @@
 package edu.vinaenter.controller;
 
+import java.util.Locale;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -21,6 +24,9 @@ public class ValidFormController {
 
 	@Autowired
 	private PictureValidator pictureValidator;
+	
+	@Autowired
+	private MessageSource messageSource;
 
 	@GetMapping("valid")
 	public String valid() {
@@ -37,7 +43,7 @@ public class ValidFormController {
 		}
 		System.out.println(user.getName());
 		System.out.println(user.getAge());
-		ra.addFlashAttribute("success", "Không có lỗi khi nhập dữ liệu vào form");
+		ra.addFlashAttribute("success", messageSource.getMessage("success", null, Locale.getDefault()));
 		return "redirect:/valid";
 	}
 
